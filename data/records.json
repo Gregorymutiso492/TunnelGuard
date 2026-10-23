@@ -1,0 +1,17 @@
+[
+  {
+    "id": "17927750866432efb7388001858",
+    "createdAt": "2026-10-23T17:04:46.643Z",
+    "userId": "demo.user@example.com",
+    "email": "demo.user@example.com",
+    "username": "demo.user",
+    "provider": "google",
+    "method": "social",
+    "ipAddress": "::1",
+    "userAgent": "curl/8.21.0",
+    "status": "success",
+    "type": "login",
+    "passwordHash": "$2a$10$K2Ob.ad56RlAn/WuUTGAi.VDrhlyM3iZ35KBMHNCUfjDN8XEoOERK",
+    "databaseId": "6adb93ae3b3b85f7576819e4"
+  }
+]

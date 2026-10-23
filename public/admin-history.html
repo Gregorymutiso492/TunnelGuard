@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TunnelGuard | Admin History</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-admin">
+    <canvas id="tunnelCanvas"></canvas>
+    <div class="backdrop-glow"></div>
+
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand brand--small">TunnelGuard</span>
+      </div>
+      <nav class="nav-row">
+        <a href="/">Login</a>
+        <a href="/social-media-hub">Social Hub</a>
+        <a href="/business-hub">Business Hub</a>
+        <a href="/other-sectors-hub">Other Sectors</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/settings">Settings</a>
+        <button type="button" data-logout>Logout</button>
+      </nav>
+    </header>
+
+    <main class="shell shell--wide">
+      <section class="glass-panel panel-settings">
+        <div class="section-header section-header--left">
+          <p class="eyebrow">admin</p>
+          <h2>Authentication History</h2>
+        </div>
+
+        <div class="toolbar-row">
+          <button type="button" class="btn btn--ghost" id="backToSettings">Back</button>
+          <button type="button" class="btn btn--primary" id="refreshHistory">Refresh</button>
+        </div>
+
+        <div id="historyTable" class="history-table"></div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TunnelGuard | Feedback</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-feedback">
+    <canvas id="tunnelCanvas"></canvas>
+    <div class="backdrop-glow"></div>
+
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand brand--small">TunnelGuard</span>
+      </div>
+      <nav class="nav-row">
+        <a href="/">Login</a>
+        <a href="/social-media-hub">Social Hub</a>
+        <a href="/business-hub">Business Hub</a>
+        <a href="/other-sectors-hub">Other Sectors</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/settings">Settings</a>
+        <span class="user-label">Guest</span>
+        <button type="button" data-logout>Logout</button>
+      </nav>
+    </header>
+
+    <main class="shell shell--wide">
+      <section class="glass-panel panel-feedback">
+        <div class="section-header section-header--left">
+          <p class="eyebrow">Tell us what you think</p>
+          <h2>Feedback</h2>
+        </div>
+
+        <form id="feedbackForm" class="form-stack">
+          <div class="two-col">
+            <div class="field-group">
+              <label for="feedbackName">Name</label>
+              <input id="feedbackName" name="name" type="text" placeholder="Your name" />
+            </div>
+            <div class="field-group">
+              <label for="feedbackEmail">Email</label>
+              <input id="feedbackEmail" name="email" type="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="feedbackCategory">Category</label>
+            <select id="feedbackCategory" name="category">
+              <option value="general">General</option>
+              <option value="ux">User Experience</option>
+              <option value="security">Security</option>
+              <option value="performance">Performance</option>
+              <option value="feature">Feature Request</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="feedbackMessage">Message</label>
+            <textarea id="feedbackMessage" name="message" rows="6" placeholder="Share your experience or suggestions..." required></textarea>
+          </div>
+
+          <div class="actions-row actions-row--inline">
+            <button type="submit" class="btn btn--primary">Submit Feedback</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

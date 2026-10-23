@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TunnelGuard | Settings</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-settings">
+    <canvas id="tunnelCanvas"></canvas>
+    <div class="backdrop-glow"></div>
+
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand brand--small">TunnelGuard</span>
+      </div>
+      <nav class="nav-row">
+        <a href="/">Login</a>
+        <a href="/social-media-hub">Social Hub</a>
+        <a href="/business-hub">Business Hub</a>
+        <a href="/other-sectors-hub">Other Sectors</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/settings">Settings</a>
+        <span class="user-label">Guest</span>
+        <button type="button" data-logout>Logout</button>
+      </nav>
+    </header>
+
+    <main class="shell shell--wide">
+      <section class="glass-panel panel-settings">
+        <div class="section-header section-header--left">
+          <p class="eyebrow">Customize</p>
+          <h2>Settings</h2>
+        </div>
+
+        <div class="settings-layout">
+          <form id="settingsForm" class="settings-form">
+            <div class="setting-block">
+              <label for="themeColor">Theme Glow</label>
+              <input id="themeColor" name="themeColor" type="color" value="#00ffc8" />
+            </div>
+
+            <div class="setting-block">
+              <label for="particleSpeed">Particle Speed</label>
+              <input id="particleSpeed" name="particleSpeed" type="range" min="0.5" max="3" step="0.1" value="1.2" />
+            </div>
+
+            <div class="setting-block">
+              <label for="glowIntensity">Glow Intensity</label>
+              <input id="glowIntensity" name="glowIntensity" type="range" min="0.5" max="2.5" step="0.1" value="1.4" />
+            </div>
+
+            <div class="setting-block toggle-block">
+              <label for="motionReduced">Reduce motion</label>
+              <input id="motionReduced" name="motionReduced" type="checkbox" />
+            </div>
+
+            <div class="setting-block">
+              <label for="bookmarks">Bookmarks</label>
+              <input id="bookmarks" name="bookmarks" type="text" value="Social Hub, Business Hub, Feedback" />
+            </div>
+
+            <div class="setting-block">
+              <label for="helpInfo">Help & Info</label>
+              <textarea id="helpInfo" name="helpInfo" rows="4">Use TunnelGuard to navigate to your preferred platform securely and keep your preferences saved in this session.</textarea>
+            </div>
+
+            <div class="actions-row actions-row--inline">
+              <button type="button" class="btn btn--ghost" id="backBtn">Back</button>
+              <button type="submit" class="btn btn--primary">Save Preferences</button>
+            </div>
+          </form>
+
+          <aside class="mini-panel">
+            <h3>Quick Actions</h3>
+            <ul>
+              <li>Saved bookmarks</li>
+              <li>Security notes</li>
+              <li>Session help</li>
+            </ul>
+            <button type="button" class="btn btn--primary" id="viewHistoryBtn">View History</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

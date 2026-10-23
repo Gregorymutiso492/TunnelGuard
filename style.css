@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0f1a;
+  overflow: hidden;
+}
+
+#tunnelCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+}
+
+/* Glassmorphic login card */
+.container {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0,255,180,0.4);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  z-index: 1;
+}
+
+/* TunnelGuard title with dark glow */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+    0 0 10px #000,
+    0 0 20px #111,
+    0 0 40px #00ffb4,
+    0 0 80px #0078d7;
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow: 
+      0 0 10px #000,
+      0 0 20px #111,
+      0 0 40px #00ffb4,
+      0 0 80px #0078d7;
+  }
+  to {
+    text-shadow: 
+      0 0 20px #000,
+      0 0 40px #222,
+      0 0 60px #00ffb4,
+      0 0 100px #0078d7;
+  }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+  color: #eee;
+}
+
+input {
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #00ffb4;
+  box-shadow: 0 0 10px #00ffb4;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #00ffb4, #0078d7);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #00ffb4;
+}
+
+.btn.secondary {
+  background: linear-gradient(90deg, #ff6f61, #ff3b2e);
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #ff6f61;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
